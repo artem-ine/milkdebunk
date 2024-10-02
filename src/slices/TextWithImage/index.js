@@ -13,11 +13,10 @@ const TextWithImage = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className={slice.variation}
     >
-      <div className={slice.variation}>
-        <PrismicNextImage field={slice.primary.image} className="image"/>
-        <PrismicRichText field={slice.primary.text}/>
-      </div>
+      <PrismicNextImage field={slice.primary.image} className="image"/>
+      <PrismicRichText field={slice.primary.text}/>
     </section>
   );
 };

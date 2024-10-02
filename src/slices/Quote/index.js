@@ -12,7 +12,7 @@ const Quote = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <PrismicRichText field={slice.primary.quote} />
+      <PrismicRichText field={slice.primary.quote}/>
     </section>
   );
 };

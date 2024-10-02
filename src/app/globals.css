@@ -7,7 +7,7 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -23,7 +23,9 @@ body {
   align-items: center;
   justify-content: center;
   align-content: center;
-  margin: 20px;
+  width: 70%;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .default{
@@ -35,14 +37,13 @@ body {
 .imageUnderText{
   display: flex;
   flex-direction: column-reverse;
-  align-items: center;
 }
 
 .textWithImageRight{
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  justify-items: center;
+  flex: 1 1 0px;
 }
 
 .textWithImageLeft{
@@ -52,13 +53,30 @@ body {
 }
 
 .image{
-  display: flex;
+  padding: 5px;
+  object-fit: contain;
 }
 
 p{
   margin: 5px;
 }
 
+h1{
+  font-size: larger;
+  font-weight: bold;
+}
+
+h2{
+  font-size: large;
+  font-weight: bold;
+  margin: 5px;
+  margin-top: 10px;
+}
+
+.styled-text{
+  display: flex;
+  align-self: baseline;
+}
 
 @layer utilities {
   .text-balance {

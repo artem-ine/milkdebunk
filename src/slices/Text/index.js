@@ -11,8 +11,9 @@ const Text = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className="styled-text"
     >
-      <PrismicRichText field={slice.primary.text} />
+      <PrismicRichText field={slice.primary.text}/>
     </section>
   );
 };
