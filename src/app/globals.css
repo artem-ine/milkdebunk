@@ -43,7 +43,6 @@ body {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  flex: 1 1 0px;
 }
 
 .textWithImageLeft{
@@ -55,6 +54,7 @@ body {
 .image{
   padding: 5px;
   object-fit: contain;
+  width: auto;
 }
 
 p{
