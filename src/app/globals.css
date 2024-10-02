@@ -54,11 +54,16 @@ body {
 .image{
   padding: 5px;
   object-fit: contain;
-  width: auto;
+  width: 100%;
 }
 
 p{
   margin: 5px;
+}
+
+.solo-image{
+  display: flex;
+  align-self: baseline;
 }
 
 h1{

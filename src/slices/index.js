@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 
 export const components = {
   heading: dynamic(() => import("./Titles")),
+  image: dynamic(() => import("./Image")),
   quote: dynamic(() => import("./Quote")),
   text: dynamic(() => import("./Text")),
   text_with_image: dynamic(() => import("./TextWithImage")),
