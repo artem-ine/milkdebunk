@@ -1,0 +1,20 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Exercitation nisi eu irure elit qui velit non reprehenderit elit. Nulla minim cillum occaecat eiusmod. Adipisicing anim officia velit voluptate magna excepteur esse minim reprehenderit eu do."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
