@@ -18,6 +18,12 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin: 20px;
 }
 
 .default{
@@ -46,15 +52,13 @@ body {
 }
 
 .image{
-  width: 80%;
   display: flex;
 }
 
 p{
   margin: 5px;
-  display: flex;
-  justify-items: center;
 }
+
 
 @layer utilities {
   .text-balance {

@@ -3,13 +3,16 @@
  * @typedef {import("@prismicio/react").SliceComponentProps<QuoteSlice>} QuoteProps
  * @param {QuoteProps}
  */
+
+import { PrismicRichText } from "@prismicio/react";
+
 const Quote = ({ slice }) => {
   return (
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for quote (variation: {slice.variation}) Slices
+      <PrismicRichText field={slice.primary.quote} />
     </section>
   );
 };

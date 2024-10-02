@@ -7,4 +7,5 @@ export const components = {
   quote: dynamic(() => import("./Quote")),
   text: dynamic(() => import("./Text")),
   text_with_image: dynamic(() => import("./TextWithImage")),
+  video: dynamic(() => import("./Video")),
 };
