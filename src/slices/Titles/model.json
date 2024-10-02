@@ -1,7 +1,7 @@
 {
   "id": "heading",
   "type": "SharedSlice",
-  "name": "Title",
+  "name": "Titles",
   "description": "Heading",
   "variations": [
     {
@@ -18,7 +18,7 @@
             "label": "heading",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "heading1"
+            "multi": "heading1,strong,em"
           }
         }
       },
@@ -38,7 +38,7 @@
             "label": "heading",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "heading2"
+            "multi": "heading2,em,strong"
           }
         }
       },

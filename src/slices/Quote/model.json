@@ -13,10 +13,12 @@
       "imageUrl": "",
       "primary": {
         "quote": {
-          "type": "Text",
+          "type": "StructuredText",
           "config": {
             "label": "quote",
-            "placeholder": ""
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "strong,em,rtl,paragraph,preformatted,list-item,o-list-item,embed,hyperlink"
           }
         }
       },

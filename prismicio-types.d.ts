@@ -4,7 +4,7 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type HomeDocumentDataSlicesSlice = QuoteSlice;
+type HomeDocumentDataSlicesSlice = HeadingSlice | QuoteSlice;
 
 /**
  * Content for home documents
@@ -68,11 +68,11 @@ export type HomeDocument<Lang extends string = string> =
 export type AllDocumentTypes = HomeDocument;
 
 /**
- * Primary content in *Title → Heading → Primary*
+ * Primary content in *Titles → Heading → Primary*
  */
 export interface HeadingSliceDefaultPrimary {
   /**
-   * heading field in *Title → Heading → Primary*
+   * heading field in *Titles → Heading → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -83,7 +83,7 @@ export interface HeadingSliceDefaultPrimary {
 }
 
 /**
- * Heading variation for Title Slice
+ * Heading variation for Titles Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -96,11 +96,11 @@ export type HeadingSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *Title → Subheading → Primary*
+ * Primary content in *Titles → Subheading → Primary*
  */
 export interface HeadingSliceSubheadingPrimary {
   /**
-   * heading field in *Title → Subheading → Primary*
+   * heading field in *Titles → Subheading → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -111,7 +111,7 @@ export interface HeadingSliceSubheadingPrimary {
 }
 
 /**
- * Subheading variation for Title Slice
+ * Subheading variation for Titles Slice
  *
  * - **API ID**: `subheading`
  * - **Description**: Default
@@ -124,12 +124,12 @@ export type HeadingSliceSubheading = prismic.SharedSliceVariation<
 >;
 
 /**
- * Slice variation for *Title*
+ * Slice variation for *Titles*
  */
 type HeadingSliceVariation = HeadingSliceDefault | HeadingSliceSubheading;
 
 /**
- * Title Shared Slice
+ * Titles Shared Slice
  *
  * - **API ID**: `heading`
  * - **Description**: Heading
@@ -147,12 +147,12 @@ export interface QuoteSliceDefaultPrimary {
   /**
    * quote field in *Quote → Default → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: quote.default.primary.quote
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  quote: prismic.KeyTextField;
+  quote: prismic.RichTextField;
 }
 
 /**

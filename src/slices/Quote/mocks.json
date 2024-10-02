@@ -4,9 +4,15 @@
 		"variation": "default",
 		"primary": {
 			"quote": {
-				"__TYPE__": "FieldContent",
-				"value": "somehow",
-				"type": "Text"
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nulla eu magna qui aute exercitation laboris irure culpa ut nisi ut et. Esse tempor minim duis do id labore ipsum minim incididunt aute. Dolore occaecat dolor fugiat eu duis laboris sint fugiat nostrud elit adipisicing sit quis incididunt."
+						}
+					}
+				]
 			}
 		},
 		"items": []

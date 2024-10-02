@@ -3,6 +3,6 @@
 import dynamic from "next/dynamic";
 
 export const components = {
-  heading: dynamic(() => import("./Title")),
+  heading: dynamic(() => import("./Titles")),
   quote: dynamic(() => import("./Quote")),
 };
