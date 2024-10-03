@@ -13,6 +13,11 @@
 						}
 					}
 				]
+			},
+			"textest": {
+				"__TYPE__": "FieldContent",
+				"value": "excited",
+				"type": "Text"
 			}
 		},
 		"items": []

@@ -243,6 +243,16 @@ export interface TextSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   text: prismic.RichTextField;
+
+  /**
+   * textest field in *Text → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text.default.primary.textest
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  textest: prismic.KeyTextField;
 }
 
 /**
