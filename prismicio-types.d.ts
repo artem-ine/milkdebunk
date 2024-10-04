@@ -4,12 +4,75 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+type AuthorDocumentDataSlicesSlice = TextSlice;
+
+/**
+ * Content for author documents
+ */
+interface AuthorDocumentData {
+  /**
+   * post written field in *author*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: author.post_written
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  post_written: prismic.ContentRelationshipField<"blog_post">;
+
+  /**
+   * Slice Zone field in *author*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: author.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<AuthorDocumentDataSlicesSlice>;
+}
+
+/**
+ * author document from Prismic
+ *
+ * - **API ID**: `author`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type AuthorDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<AuthorDocumentData>, "author", Lang>;
+
 type BlogPostDocumentDataSlicesSlice = BlogPostSlice;
 
 /**
  * Content for blog post documents
  */
 interface BlogPostDocumentData {
+  /**
+   * featured field in *blog post*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.featured
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  featured: prismic.ContentRelationshipField<"featured_post">;
+
+  /**
+   * written by field in *blog post*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.written_by
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  written_by: prismic.ContentRelationshipField<"author">;
+
   /**
    * Slice Zone field in *blog post*
    *
@@ -138,6 +201,7 @@ export type HomeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
 
 export type AllDocumentTypes =
+  | AuthorDocument
   | BlogPostDocument
   | FeaturedPostDocument
   | HomeDocument;
@@ -652,6 +716,9 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      AuthorDocument,
+      AuthorDocumentData,
+      AuthorDocumentDataSlicesSlice,
       BlogPostDocument,
       BlogPostDocumentData,
       BlogPostDocumentDataSlicesSlice,

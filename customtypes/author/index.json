@@ -1,7 +1,7 @@
 {
   "format": "custom",
-  "id": "blog_post",
-  "label": "blog post",
+  "id": "author",
+  "label": "author",
   "repeatable": true,
   "status": true,
   "json": {
@@ -12,20 +12,12 @@
           "label": "UID"
         }
       },
-      "featured": {
+      "post_written": {
         "type": "Link",
         "config": {
-          "label": "featured",
+          "label": "post written",
           "select": "document",
-          "customtypes": ["featured_post"]
-        }
-      },
-      "written_by": {
-        "type": "Link",
-        "config": {
-          "label": "written by",
-          "select": "document",
-          "customtypes": ["author"]
+          "customtypes": ["blog_post"]
         }
       },
       "slices": {
@@ -33,7 +25,7 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "blog_post": {
+            "text": {
               "type": "SharedSlice"
             }
           }

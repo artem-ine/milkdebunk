@@ -17,10 +17,12 @@ export async function generateMetadata({ params: { uid, lang } }) {
 export default async function Page({ params: { uid, lang } }) {
   const client = createClient();
   const page = await client.getByUID("blog_post", uid, { lang });
+  console.log("test:", page.data.written_by);
 
   return (
     <div>
-        <SliceZone slices={page.data.slices} components={components} />
+      <SliceZone slices={page.data.slices} components={components} />
+      author: {page.data.written_by.author}
     </div>
   )
 }

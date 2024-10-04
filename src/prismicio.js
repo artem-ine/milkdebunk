@@ -23,8 +23,8 @@ const routes = [
   },
   {
     type: "blog_post",
-    path: "/:uid"
-  }
+    path: "/:uid",
+  },
 ];
 
 /**
