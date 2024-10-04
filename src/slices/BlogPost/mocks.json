@@ -1,0 +1,30 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"post_author": {
+				"__TYPE__": "FieldContent",
+				"value": "somebody",
+				"type": "Text"
+			},
+			"post_content": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Tempor mollit proident anim esse commodo fugiat Lorem cupidatat officia non laboris."
+						}
+					}
+				]
+			},
+			"post_date": {
+				"__TYPE__": "FieldContent",
+				"type": "Date",
+				"value": "2022-10-05"
+			}
+		},
+		"items": []
+	}
+]

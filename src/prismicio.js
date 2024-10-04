@@ -21,6 +21,10 @@ const routes = [
   	type: "home",
   	path: "/",
   },
+  {
+    type: "blog_post",
+    path: "/:uid"
+  }
 ];
 
 /**

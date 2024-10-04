@@ -89,7 +89,6 @@ h2{
   height: 0;
   overflow: hidden;
   width: 100%;
-  max-width: 800px;
 }
 
 .video iframe {
